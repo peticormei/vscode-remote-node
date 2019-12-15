@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: node
+    ports:
+      - "3000:3000"
+    volumes:
+      - ~/.ssh:/home/node/.ssh-localhost:ro
+      - ~/.aws:/home/node/.aws-localhost:ro
+      - ..:/workspace
+    command: /bin/sh -c "while sleep 1000; do :; done"

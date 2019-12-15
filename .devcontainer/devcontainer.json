@@ -1,0 +1,16 @@
+{
+    "name": "vscode-remote-node",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "server",
+    "remoteUser": "node",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/zsh"
+    },
+    "extensions": [
+        "eamodio.gitlens",
+        "dbaeumer.vscode-eslint"
+    ],
+    "postCreateCommand": "zsh scripts/setup-environment.sh"
+}
