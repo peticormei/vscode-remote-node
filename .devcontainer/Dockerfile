@@ -1,6 +1,6 @@
 FROM node:10-alpine
 
-RUN apk add --update zsh git
+RUN apk add --update zsh git openssh
 
 USER node
 
